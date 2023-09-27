@@ -14,6 +14,18 @@ module.exports = {
         allowNull: false,
         type: Sequelize.STRING,
       },
+      complement: {
+        allowNull: true,
+        type: Sequelize.STRING,
+      },
+      city: {
+        allowNull: false,
+        type: Sequelize.STRING,
+      },
+      state: {
+        allowNull: false,
+        type: Sequelize.STRING,
+      },
       availability: {
         allowNull: false,
         type: Sequelize.STRING,
