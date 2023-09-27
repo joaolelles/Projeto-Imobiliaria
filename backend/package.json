@@ -6,6 +6,7 @@
   "scripts": {
     "start": "npm run build && node ./dist/index.js",
     "dev": "tsnd ./src/index.ts",
+    "db:reset": "npx -y tsc && npx sequelize-cli db:drop && npx sequelize-cli db:create",
     "build": "tsc"
   },
   "keywords": [],
