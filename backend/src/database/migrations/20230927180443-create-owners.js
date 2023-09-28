@@ -14,7 +14,7 @@ module.exports = {
         },
         onUpdate: 'CASCADE',
         onDelete: 'CASCADE',
-        primeryKey: true,
+        primaryKey: true,
       },
       idOwnerProperty: {
         allowNull: false,
@@ -26,7 +26,7 @@ module.exports = {
         },
         onUpdate: 'CASCADE',
         onDelete: 'CASCADE',
-        primeryKey: true,
+        primaryKey: true,
       },
     })
   },
