@@ -1,7 +1,7 @@
 import { INTEGER, Model, STRING } from 'sequelize';
 import db from '.';
 
-class Clients extends Model {
+class Client extends Model {
   declare idClient: number;
   declare username: string;
   declare role: string;
@@ -9,7 +9,7 @@ class Clients extends Model {
   declare password: string;
 }
 
-Clients.init({
+Client.init({
     idClient: {
         allowNull: false,
         autoIncrement: true,
@@ -35,8 +35,8 @@ Clients.init({
 }, {
   sequelize: db,
   timestamps: false,
-  modelName: 'clients',
+  modelName: 'client',
   underscored: true,
 });
 
-export default Clients;
+export default Client;

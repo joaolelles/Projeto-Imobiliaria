@@ -1,7 +1,7 @@
 import { INTEGER, Model, STRING } from 'sequelize';
 import db from '.';
 
-class Properties extends Model {
+class Property extends Model {
   declare idProperty: number;
   declare address: string;
   declare complement: string;
@@ -11,7 +11,7 @@ class Properties extends Model {
   declare price: number;
 }
 
-Properties.init({
+Property.init({
     idProperty: {
         allowNull: false,
         autoIncrement: true,
@@ -45,8 +45,8 @@ Properties.init({
 }, {
   sequelize: db,
   timestamps: false,
-  modelName: 'properties',
+  modelName: 'property',
   underscored: true,
 });
 
-export default Properties;
+export default Property;
