@@ -17,7 +17,7 @@ export default class ClientController {
     if(!client) {
         return res.status(409).json({ message: 'Cliente já cadastrado' });
     }
-    return res.status(200).json({ message: 'Cadastrado com sucesso!'});
+    return res.status(201).json({ message: 'Cadastrado com sucesso!'});
   }
 
   postLogin = async (req: Request, res: Response) => {
@@ -31,4 +31,10 @@ export default class ClientController {
       return res.status(200).json({ token });
     }
   }
+
+  getRole = async (req: Request, res: Response) => {
+    const { email } = req.body;
+    const role = await this._service.getRole(email);
+    return res.status(200).json({ role });
+  };
 }

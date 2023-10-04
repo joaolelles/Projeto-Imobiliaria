@@ -32,4 +32,13 @@ export default class ClientService {
       return clientWithoutPassword
     }
   }
+
+  getRole = async (email: string) => {
+    const client = await this._model.findOne({ where: { email } });
+    if (!client) {
+      return null;
+    }
+    const { role } = client.dataValues;
+    return role;
+  };
 }
