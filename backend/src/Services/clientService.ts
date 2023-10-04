@@ -19,7 +19,17 @@ export default class ClientService {
       } else {
         return null;
       }
-    
-    
+  }
+
+  postLogin = async (email:string, passwordX: string) => {
+    const client = await this._model.findOne({ where: { email } });
+    if(!client){
+      return null;
+    }
+    const hash = bcrypt.compareSync(passwordX, client.dataValues.password);
+    if(hash) {
+      const {passwordX: _, ...clientWithoutPassword} = client.dataValues
+      return clientWithoutPassword
+    }
   }
 }

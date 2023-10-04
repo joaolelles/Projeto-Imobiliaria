@@ -9,5 +9,6 @@ const clientController = new ClientController(clientService);
 const routerClient = express.Router();
 
 routerClient.post('/register', clientController.postClient);
+routerClient.post('/login', clientController.postLogin);
 
 export default routerClient;
