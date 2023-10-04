@@ -37,4 +37,11 @@ export default class ClientController {
     const role = await this._service.getRole(email);
     return res.status(200).json({ role });
   };
+
+  upRole = async (req: Request, res: Response) => {
+    const { payload } = req.body.user;
+    const { role } = req.body;
+    await this._service.upRole(payload.id, role)
+    return res.status(200).json({ message: 'Alteração bem sucedida!'});
+  };
 }
