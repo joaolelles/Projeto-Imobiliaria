@@ -6,8 +6,8 @@ import Client from '../database/models/clientModel';
 const clientService = new ClientService(Client);
 const clientController = new ClientController(clientService);
 
-const router = express.Router();
+const routerClient = express.Router();
 
-router.post('/register', clientController.postClient);
+routerClient.post('/register', clientController.postClient);
 
-export default router;
+export default routerClient;
