@@ -33,6 +33,14 @@ export default class ClientService {
     }
   }
 
+  getAllClients = async () => {
+    const client = await this._model.findAll( { attributes: { exclude: ['password']} } );
+    if (!client) {
+      return null;
+    }
+    return client;
+  };
+
   getRole = async (email: string) => {
     const client = await this._model.findOne({ where: { email } });
     if (!client) {

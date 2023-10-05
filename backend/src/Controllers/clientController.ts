@@ -38,6 +38,11 @@ export default class ClientController {
     return res.status(200).json({ role });
   };
 
+  getAllClients = async (_req: Request, res: Response) => {
+    const allClients = await this._service.getAllClients();
+    return res.status(200).json(allClients);
+  };
+
   upRole = async (req: Request, res: Response) => {
     const { payload } = req.body.user;
     const { role } = req.body;
