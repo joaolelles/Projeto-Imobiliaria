@@ -6,9 +6,9 @@ criarClient - Check
 
 login - Check
 
-getAll
+getAll - Check
 
-getById
+getById - Check
 
 getRole - Check
 
