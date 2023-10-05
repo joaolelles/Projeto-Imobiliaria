@@ -14,12 +14,6 @@ getRole - Check
 
 updateRole - Check
 
-## getImoveisClient
-
-role: locador, locatario, comprador, vendedor, default
-
----
-
 ## Property -
 
 postProperty -
