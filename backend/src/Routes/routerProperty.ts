@@ -12,5 +12,6 @@ const routerProperty = express.Router();
 routerProperty.post('/register', authToken, propertyController.postProperty);
 routerProperty.get('/property', authToken, propertyController.getAllProperties);
 routerProperty.get('/city', authToken, propertyController.getAllPropertyByCity);
+routerProperty.get('/address', authToken, propertyController.getAllPropertyByAddress);
 
 export default routerProperty;

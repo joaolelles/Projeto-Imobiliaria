@@ -20,7 +20,9 @@ postProperty - Check
 
 getAllProperties - Check
 
-getAllPropertyByCity -
+getAllPropertyByCity - Check
+
+getAllPropertyByAddress - Check
 
 updateProperty -
 

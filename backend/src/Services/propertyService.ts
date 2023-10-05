@@ -59,4 +59,12 @@ export default class PropertyService {
     }
     return properties;
   };
+
+  getAllPropertyByAddress = async (address: string ) => {
+    const properties = await this._model.findAll({where: { address } });
+    if (!properties) {
+      return null;
+    }
+    return properties;
+  };
 }
