@@ -75,4 +75,12 @@ export default class PropertyService {
     }
     return properties;
   };
+
+  getAllPropertyByAvailability = async (availability: string ) => {
+    const properties = await this._model.findAll({where: { availability } });
+    if (!properties) {
+      return null;
+    }
+    return properties;
+  };
 }

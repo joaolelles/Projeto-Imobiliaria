@@ -57,4 +57,13 @@ export default class PropertyController {
     }
     return res.status(200).json(properties);
   };
+
+  getAllPropertyByAvailability = async (req: Request, res: Response) => {
+    const { availability } = req.body;
+    const properties = await this._service.getAllPropertyByAvailability(availability);
+    if(!properties) {
+      return res.status(401).json({ message: 'Propriedades não encontradas'})
+    }
+    return res.status(200).json(properties);
+  };
 }

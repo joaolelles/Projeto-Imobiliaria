@@ -24,7 +24,9 @@ getAllPropertyByCity - Check
 
 getAllPropertyByAddress - Check
 
-getAllPropertyByState -
+getAllPropertyByState - Check
+
+getAllPropertyByAvailability - Check
 
 updateProperty -
 
