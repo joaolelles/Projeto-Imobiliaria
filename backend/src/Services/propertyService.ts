@@ -51,4 +51,12 @@ export default class PropertyService {
     }
     return properties;
   };
+
+  getAllPropertyByCity = async (city: string ) => {
+    const properties = await this._model.findAll({where: { city } });
+    if (!properties) {
+      return null;
+    }
+    return properties;
+  };
 }

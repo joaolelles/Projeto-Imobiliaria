@@ -18,9 +18,9 @@ updateRole - Check
 
 postProperty - Check
 
-getAllProperties -
+getAllProperties - Check
 
-getPropertyById -
+getAllPropertyByCity -
 
 updateProperty -
 
