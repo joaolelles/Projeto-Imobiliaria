@@ -43,6 +43,15 @@ export default class ClientController {
     return res.status(200).json(allClients);
   };
 
+  getClientById = async (req: Request, res: Response) => {
+    const { idClient } = req.params;
+    const client = await this._service.getClientById(Number(idClient));
+    if(!client) {
+      return res.status(401).json({ message: 'Cliente não encontrado'})
+    }
+    return res.status(200).json(client);
+  };
+
   upRole = async (req: Request, res: Response) => {
     const { payload } = req.body.user;
     const { role } = req.body;

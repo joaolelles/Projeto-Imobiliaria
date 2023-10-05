@@ -34,7 +34,15 @@ export default class ClientService {
   }
 
   getAllClients = async () => {
-    const client = await this._model.findAll( { attributes: { exclude: ['password']} } );
+    const clients = await this._model.findAll( { attributes: { exclude: ['password']} } );
+    if (!clients) {
+      return null;
+    }
+    return clients;
+  };
+
+  getClientById = async (id: number ) => {
+    const client = await this._model.findByPk(id, {attributes: { exclude: ['password']} });
     if (!client) {
       return null;
     }
