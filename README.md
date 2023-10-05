@@ -20,10 +20,14 @@ role: locador, locatario, comprador, vendedor, default
 
 ---
 
-Property -
+## Property -
 
-criarProperty - addres-complement-city-state-price-availability
-priceForSale?null priceForRent? availabilitySale? availabilityRent?
+postProperty -
+
+getAll -
+
+getById -
+
 updateProperty -
 
 deleteProperty
