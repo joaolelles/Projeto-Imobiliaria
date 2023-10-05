@@ -24,6 +24,8 @@ getAllPropertyByCity - Check
 
 getAllPropertyByAddress - Check
 
+getAllPropertyByState -
+
 updateProperty -
 
 deleteProperty

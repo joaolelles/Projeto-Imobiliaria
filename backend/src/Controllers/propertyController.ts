@@ -48,4 +48,13 @@ export default class PropertyController {
     }
     return res.status(200).json(properties);
   };
+
+  getAllPropertyByState = async (req: Request, res: Response) => {
+    const { state } = req.body;
+    const properties = await this._service.getAllPropertyByState(state);
+    if(!properties) {
+      return res.status(401).json({ message: 'Propriedades não encontradas'})
+    }
+    return res.status(200).json(properties);
+  };
 }
