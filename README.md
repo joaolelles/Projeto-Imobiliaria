@@ -2,13 +2,13 @@
 
 ## Client
 
-criarClient - Check
+postClient - Check
 
-login - Check
+postLogin - Check
 
-getAll - Check
+getAllClients - Check
 
-getById - Check
+getClientById - Check
 
 getRole - Check
 
@@ -18,9 +18,9 @@ updateRole - Check
 
 postProperty -
 
-getAll -
+getAllProperties -
 
-getById -
+getPropertyById -
 
 updateProperty -
 

@@ -4,7 +4,7 @@ import db from '.';
 class Property extends Model {
   declare idProperty: number;
   declare address: string;
-  declare complement: string;
+  declare complement?: string;
   declare city: string;
   declare state: string;
   declare availability: string;
