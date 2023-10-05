@@ -16,7 +16,7 @@ updateRole - Check
 
 ## Property -
 
-postProperty -
+postProperty - Check
 
 getAllProperties -
 

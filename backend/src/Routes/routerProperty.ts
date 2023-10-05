@@ -9,6 +9,7 @@ const propertyController = new PropertyController(propertyService);
 
 const routerProperty = express.Router();
 
-routerProperty.post('/register', propertyController.postProperty);
+routerProperty.post('/register', authToken, propertyController.postProperty);
+routerProperty.get('/property', authToken, propertyController.getAllProperties);
 
 export default routerProperty;

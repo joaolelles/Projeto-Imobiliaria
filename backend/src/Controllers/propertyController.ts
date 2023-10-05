@@ -25,4 +25,9 @@ export default class PropertyController {
     }
     return res.status(201).json({ message: 'Propiedade cadastrada com sucesso!'});
   }
+
+  getAllProperties = async (_req: Request, res: Response) => {
+    const allProperties = await this._service.getAllProperties();
+    return res.status(200).json(allProperties);
+  };
 }

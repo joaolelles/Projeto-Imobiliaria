@@ -43,4 +43,12 @@ export default class PropertyService {
       return null;
     }
   }
+
+  getAllProperties = async () => {
+    const properties = await this._model.findAll();
+    if (!properties) {
+      return null;
+    }
+    return properties;
+  };
 }
