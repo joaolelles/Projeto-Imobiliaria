@@ -68,4 +68,13 @@ export default class ClientController {
     }
     return res.status(200).json({ message: 'Alteração bem sucedida!'});
   };
+
+  delClient = async (req: Request, res: Response) => {
+    const { payload } = req.body.user;
+    const deleteClient = await this._service.delClient(payload.id)
+    if (deleteClient == 1) {
+      return res.status(200).json({ message: 'deletado com sucesso!'});
+    }
+    return res.status(400).json({ message: 'usuário não encontrado'});
+  }
 }

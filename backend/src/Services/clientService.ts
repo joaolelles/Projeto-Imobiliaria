@@ -84,4 +84,13 @@ export default class ClientService {
       }
     );
   };
+
+  delClient = async (id: number,) => {
+    const client = await this._model.findByPk( id );
+    if (!client) {
+      return null;
+    }
+    await this._model.destroy( { where: { idClient: id } })
+    return 1;
+  }
 }

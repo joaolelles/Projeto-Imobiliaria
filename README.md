@@ -6,7 +6,7 @@ postClient - Check
 
 updateClient - Check
 
-deleteClient -
+deleteClient - Check
 
 postLogin - Check
 

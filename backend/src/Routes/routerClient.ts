@@ -17,5 +17,6 @@ routerClient.get('/clients/:idClient', authToken, clientController.getClientById
 routerClient.get('/role', authToken, clientController.getRole);
 routerClient.put('/role', authToken, authRole, clientController.upRole);
 routerClient.put('/clients', authToken, clientController.upClient);
+routerClient.delete('/clients', authToken, clientController.delClient);
 
 export default routerClient;
