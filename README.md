@@ -4,6 +4,10 @@
 
 postClient - Check
 
+updateClient - Check
+
+deleteClient -
+
 postLogin - Check
 
 getAllClients - Check

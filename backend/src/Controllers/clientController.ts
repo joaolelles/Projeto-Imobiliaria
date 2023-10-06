@@ -58,4 +58,14 @@ export default class ClientController {
     await this._service.upRole(payload.id, role)
     return res.status(200).json({ message: 'Alteração bem sucedida!'});
   };
+
+  upClient = async (req: Request, res: Response) => {
+    const { payload } = req.body.user;
+    const { email, password, name } = req.body;
+    const client = await this._service.upClient(payload.id, name, email, password)
+    if (client === null) {
+      return res.status(400).json({ message: 'erro'});
+    }
+    return res.status(200).json({ message: 'Alteração bem sucedida!'});
+  };
 }

@@ -58,7 +58,7 @@ export default class ClientService {
     return role;
   };
 
-  upRole = async (id: string, newRole: string) => {
+  upRole = async (id: number, newRole: string) => {
     const client = await this._model.findOne({ where: { idClient: id } });
     if (!client) {
       return null;
@@ -66,6 +66,21 @@ export default class ClientService {
     client.update(
       {
         role: newRole,
+      }
+    );
+  };
+
+  upClient = async (id: number, name: string, email: string, password: string) => {
+    const client = await this._model.findByPk( id );
+    const clientPassword = bcrypt.hashSync(password, salt);
+    if (!client) {
+      return null;
+    }
+    client.update(
+      {
+        email: email, 
+        password: clientPassword, 
+        username: name
       }
     );
   };
